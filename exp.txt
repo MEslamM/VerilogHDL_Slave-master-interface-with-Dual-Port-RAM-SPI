@@ -1,0 +1,20 @@
+vlib work
+
+vlog wrapper_SPI.v slave_spi_V2.v Memory_Spi.v Master.v
+
+vsim -voptargs=+acc work.MASTER
+
+add wave /MASTER/clk
+add wave /MASTER/ss_n
+add wave /MASTER/m9/rx_valid
+add wave /MASTER/m9/tx_valid
+add wave /MASTER/miso
+add wave /MASTER/mosi
+add wave /MASTER/m9/m5/din
+add wave /MASTER/m9/m5/dout
+add wave /MASTER/m9/m5/adress_write
+add wave /MASTER/m9/m5/adress_read
+add wave /MASTER/m9/m5/mem_spi1
+
+
+run -all
